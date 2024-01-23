@@ -15,3 +15,10 @@ const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex, dearRegex];
 
 // Function to check if a message contains spam
 const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
+// Event listener for button click
+checkMessageButton.addEventListener("click", () => {
+    // Check if the message input is empty
+    if (messageInput.value === "") {
+      alert("Please enter a message.");
+      return;
+    }
